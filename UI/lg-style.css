@@ -1,0 +1,505 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--Primary-500: #A53DFF;
+	--Gray-White: #FFF;
+	--Gray-900: #132238;
+	--Gray-bg: #EDD8FF;
+	--Gray-700: #424E60;
+	--Gray-500: #697484;
+	--Gray-50: #F0F1F3;
+	--Gray-400: #87909D;
+	--Gray-600: #556070;
+	--Gray-800: #2B384C;
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+::-webkit-scrollbar-track {
+	background: transparent; 
+}
+
+::-webkit-scrollbar-thumb {
+	background: none;
+	border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: var(--Gray-700); 
+}
+
+.navbar {
+	display: flex;
+	width: 100%;
+	padding: 10px 150px;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#logo {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 12px;
+}
+
+#logo-letter {
+	display: flex;
+	height: 56px;
+	padding: 0px 20px;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 10px;
+	border-radius: 1000px;
+	background: var(--Primary-500);
+	color: var(--Gray-White);
+	font-family: "Work Sans", sans-serif;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 56px;
+}
+
+#logo-name {
+	color: var(--Gray-900);
+	font-family: "Work Sans", sans-serif;
+	font-size: 24px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 40px;
+}
+
+.menu {
+	display: flex;
+	align-items: flex-start;
+	list-style: none;
+}
+
+.menu a {
+	text-decoration: none;
+	color: #333333;
+	font-family: "Work Sans", sans-serif;
+	padding: 12px 24px;
+	font-size: 12px;
+}
+
+.menu a:hover {
+	background: var(--Primary-500);
+	color: var(--Gray-White);
+	font-weight: 700;
+	font-size: 14px;
+	border-radius: 5px;
+}
+
+.cl-container {
+	position: relative;
+	overflow: hidden;
+	display: flex;
+	height: 480px;
+}
+
+.cl-container::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	width: 30%; 
+	background: linear-gradient(180deg, rgba(218, 77, 241, 0.2), rgba(196, 245, 233, 0.8));
+	filter: blur(150px);
+	z-index: 0; 
+}
+
+.cl-container::after {
+	content: '';
+	position: absolute;
+	top: 10%;
+	left: 0;
+	bottom: 0;
+	width: 3%; 
+	background: rgba(218, 77, 241, 0.5);
+	filter: blur(150px);
+	z-index: 0; 
+}
+
+.lg-container {
+	position: absolute;
+	display: flex;
+	padding: 2rem;
+	width: 80%;
+	height: 470px;
+	top: 15%;
+	left: 10%;
+	box-shadow: 1px 1px 10px 1px;
+	border: none;
+	border-radius: 10px;
+	font-family: "Work Sans", sans-serif;
+	background-color: #fff;
+}
+
+.lt-blog {
+	width: 50%;
+}
+
+.lt-blog h1 {
+	font-size: 40px;
+	font-weight: 600;
+}
+
+.lt-blog p {
+	font-size: 16px;
+	padding: 2rem;
+}
+
+.lt-blog button {
+	font-size: 18px;
+	border: 2px #000 solid;
+	border-radius: 10px;
+	color: #000;
+	font-weight: 600;
+	background-color: transparent;
+	padding: 1rem;
+	margin-left: 10rem;
+	margin-top: 3rem;
+}
+
+.lg-div {
+	width: 40%;
+	margin-left: 10%;
+}
+
+.lg-div h1 {
+	font-size: 40px;
+	font-weight: 600;
+	width: 80%;
+}
+
+.lg-div h1 span {
+	color: var(--Primary-500);
+}
+
+.lg-div p {
+	font-size: 16px;
+	font-weight: 200;
+	padding: 1rem 0;
+}
+
+form {
+	display: grid;
+	gap: 0.2rem;
+}
+
+.valid-div {
+	color: crimson;
+	margin-top: 7rem;
+}
+
+#errorNote {
+	display: none;
+}
+
+form input {
+	position: fixed;
+	height: 2rem;
+	padding: 1rem;
+	border: none;
+	border-bottom: 1px var(--Gray-500) solid;
+	font-size: 16px;
+	font-weight: 200;
+	outline: none;
+}
+
+form input[type="password"] {
+	margin-top: 5rem;
+}
+
+form button {
+	position: fixed;
+	font-size: 18px;
+	color: #fff;
+	padding: 1rem 1.5rem;
+	margin-top: 12rem;
+	border-radius: 5px;
+	border: none;
+	background-color: var(--Primary-500);
+	width: 180px;
+	text-align: center;
+	font-weight: 600;
+}
+
+form button svg {
+	margin-left: 1rem;
+}
+
+.footer-container {
+	display: grid;
+	justify-content: center;
+	font-family: "Work Sans", sans-serif;
+	background-color: var(--Gray-800);
+	padding: 1rem 0;
+}
+
+.footer-nav {
+	display: flex;
+	width: 100%;
+	padding: 5px 150px;
+	gap: 20px;
+	align-items: center;
+	color: var(--Gray-White);
+	bottom: 0;
+}
+
+#ft-logo {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 12px;
+}
+
+#ft-logo-letter {
+	display: flex;
+	height: 56px;
+	padding: 0 20px;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 10px;
+	border-radius: 1000px;
+	background: var(--Primary-500);
+	color: var(--Gray-White);
+	font-family: "Work Sans", sans-serif;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 56px;
+}
+
+#ft-logo-name {
+	color: var(--Gray-White);
+	font-family: "Work Sans", sans-serif;
+	font-size: 24px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 40px;
+}
+
+.ft-menu {
+	display: flex;
+	align-items: flex-start;
+	list-style: none;
+}
+
+.ft-menu a {
+	text-decoration: none;
+	font-family: "Work Sans", sans-serif;
+	padding: 12px 24px;
+	font-size: 12px;
+	color: var(--Gray-50);
+}
+
+@media screen and (max-width: 767px) {
+	.navbar {
+		display: none;
+	}
+
+
+	.cl-container {
+		position: relative;
+		overflow: visible;
+		display: none;
+		height: 448px;
+	}
+
+	.cl-container::before {
+		display: none;
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		width: 30%; 
+		background: linear-gradient(180deg, rgba(218, 77, 241, 0.2), rgba(196, 245, 233, 0.8));
+		filter: blur(150px);
+		z-index: 0; 
+	}
+
+	.cl-container::after {
+		display: none;
+		content: '';
+		position: absolute;
+		top: 10%;
+		left: 0;
+		bottom: 0;
+		width: 3%; 
+		background: rgba(218, 77, 241, 0.5);
+		filter: blur(150px);
+		z-index: 0; 
+	}
+
+	.lg-container {
+		position: relative;
+		display: grid;
+		padding: 1rem;
+		width: 100%;
+		top: 0;
+		left: 0;
+		box-shadow: 0 0 0 0;
+		border: none;
+		border-radius: 0;
+		font-family: "Work Sans", sans-serif;
+		background-color: #fff;
+	}
+
+	.lt-blog {
+		width: 100%;
+	}
+
+	.lt-blog h1 {
+		font-size: 40px;
+		font-weight: 600;
+	}
+
+	.lt-blog p {
+		font-size: 16px;
+		padding: 1rem;
+	}
+
+	.lt-blog button {
+		font-size: 18px;
+		border: 2px #000 solid;
+		border-radius: 10px;
+		color: #000;
+		font-weight: 600;
+		background-color: transparent;
+		padding: 1rem;
+		margin-left: 0;
+	}
+
+	.lg-div {
+		width: 100%;
+		margin-left: 0;
+		margin-top: 2rem;
+	}
+
+	.lg-div h1 {
+		font-size: 40px;
+		font-weight: 600;
+		width: 90%;
+	}
+
+	.lg-div h1 span {
+		color: var(--Primary-500);
+	}
+
+	.lg-div p {
+		font-size: 16px;
+		font-weight: 200;
+		padding: 1rem 0;
+	}
+
+	form {
+		display: grid;
+		gap: 2rem;
+	}
+
+	form input {
+		height: 2rem;
+		padding: 1rem;
+		border: none;
+		border-bottom: 1px var(--Gray-500) solid;
+		font-size: 16px;
+		font-weight: 200;
+	}
+
+	form button {
+		font-size: 18px;
+		color: #fff;
+		padding: 1rem 1.5rem;
+		margin-top: 2rem;
+		margin-bottom: 2rem;
+		border-radius: 5px;
+		border: none;
+		background-color: var(--Primary-500);
+		width: 180px;
+		text-align: center;
+		font-weight: 600;
+	}
+
+	form button svg {
+		margin-left: 1rem;
+	}
+
+	.footer-container {
+		display: grid;
+		justify-content: center;
+		font-family: "Work Sans", sans-serif;
+		background-color: var(--Gray-800);
+		padding: 6rem 0;
+
+	}
+
+	.footer-nav {
+		display: grid;
+		width: 100%;
+		margin-top: 2rem;
+		padding: 2rem;
+		gap: 20px;
+		align-items: center;
+		color: var(--Gray-White);
+	}
+
+	#ft-logo {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 12px;
+	}
+
+	#ft-logo-letter {
+		display: flex;
+		height: 56px;
+		padding: 0px 20px;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 10px;
+		border-radius: 1000px;
+		background: var(--Primary-500);
+		color: var(--Gray-White);
+		font-family: "Work Sans", sans-serif;
+		font-size: 18px;
+		font-style: normal;
+		font-weight: 600;
+		line-height: 56px;
+	}
+
+	#ft-logo-name {
+		color: var(--Gray-White);
+		font-family: "Work Sans", sans-serif;
+		font-size: 24px;
+		font-style: normal;
+		font-weight: 600;
+		line-height: 40px;
+	}
+
+	.ft-menu {
+		display: grid;
+		align-items: flex-start;
+		list-style: none;
+		text-align: center;
+	}
+
+	.ft-menu a {
+		text-decoration: none;
+		font-family: "Work Sans", sans-serif;
+		padding: 1rem 2rem;
+		font-size: 12px;
+		color: var(--Gray-50);
+	}
+}
