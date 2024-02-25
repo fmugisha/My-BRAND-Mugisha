@@ -234,6 +234,7 @@
 .ab-sk-container {
 	position: relative;
 	display: grid;
+	z-index: 0;
 }
 
 .ab-container {
@@ -1111,7 +1112,7 @@ form button svg {
 	.gt-container {
 		display: grid;
 		width: 100%;
-		z-index: 1;
+		z-index: 0;
 	}
 
 	.gt-div {
@@ -1538,7 +1539,7 @@ form button svg {
 		gap: 1rem;
 		margin: 2rem 0;
 		font-family: "Work Sans", sans-serif;
-		z-index: 1;
+		z-index: 0;
 	}
 
 	.bl-card {
@@ -1549,7 +1550,7 @@ form button svg {
 		flex-shrink: 0;
 		scroll-snap-align: start;
 		transition: transform 0.3s ease;
-		z-index: 1;
+		z-index: 0;
 	}
 
 	.bl-card:hover {
@@ -1664,12 +1665,12 @@ form button svg {
 		top: 0;
 		display: grid;
 		gap: 4rem;
-		width: 90%;
+		width: 98%;
 		border: none;
 		border-radius: 0;
 		margin: 1rem 0;
 		padding: 50px;
-		z-index: 1;
+		z-index: 0;
 		background: #fff;
 		box-shadow: 0 0 0 0;
 	}
