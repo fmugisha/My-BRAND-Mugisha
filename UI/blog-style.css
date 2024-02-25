@@ -502,10 +502,16 @@ form .text-sct svg {
 	}
 
 	.mobile-navbar {
+		position: fixed;
 		display: flex;
 		justify-content: space-between;
-		margin: 1rem 1rem 3rem 1rem;
+		width: 100%;
+		margin: 0;
+		padding: 2rem;
+		background-color: var(--Gray-White);
+		z-index: 1;
 	}
+
 	#mb-logo {
 		display: flex;
 		justify-content: start;
@@ -602,7 +608,7 @@ form .text-sct svg {
 	}
 
 	.article-container {
-		margin: 1rem;
+		margin: 0 2rem;
 		font-family: "Work Sans", sans-serif;
 		padding: 1rem;
 	}
@@ -612,6 +618,7 @@ form .text-sct svg {
 		border: none;
 		font-size: 15px;
 		font-weight: 600;
+		margin-top: 8rem;
 	}
 
 	.article-container button svg {
