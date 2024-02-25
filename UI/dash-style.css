@@ -113,6 +113,10 @@
 	height: auto;
 }
 
+.burgerMenu {
+	display: none;
+}
+
 .adm-container {
 	width: 75%;
 }
@@ -249,4 +253,262 @@ table td {
 
 table tr:nth-child(even) {
 	background-color: var(--Gray-50);
+}
+
+@media screen and (max-width: 767px) {
+	.dashboard {
+		display: flex;
+		height: 100vh;
+		overflow: visible;
+	}
+
+	.navbar {
+		position: fixed;
+		top: 0;
+		right: 100%;
+		width: 100%;
+		min-height: 100vh;
+		display: block;
+		z-index: 1;
+		-webkit-transition: 0.4s;
+		transition: 0.4s;
+		background-color: rgba(165, 61, 255, 0.6);
+		backdrop-filter: blur(5px);
+		padding: 3rem;
+		border-radius: 0;
+	}
+
+	.navbar hr {
+		height: 1px;
+	}
+
+	#logo {
+		display: flex;
+		justify-content: start;
+		align-items: center;
+		gap: 12px;
+		margin: 0 2rem;
+	}
+
+	#logo-letter {
+		display: flex;
+		height: 56px;
+		padding: 0px 20px;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 10px;
+		border-radius: 1000px;
+		background: var(--Gray-White);
+		color: var(--Primary-500);
+		font-family: "Work Sans", sans-serif;
+		font-size: 20px;
+		font-style: normal;
+		font-weight: 600;
+		line-height: 56px;
+	}
+
+	#logo-name {
+		color: var(--Gray-White);
+		font-family: "Work Sans", sans-serif;
+		font-size: 26px;
+		font-style: normal;
+		font-weight: 600;
+		line-height: 40px;
+	}
+
+	.menu {
+		display: grid;
+		list-style: none;
+		margin: 5rem 0;
+		width: 100%;
+	}
+
+	.menu a {
+		font-weight: 600;
+		text-decoration: none;
+		color: var(--Gray-White);
+		font-family: "Work Sans", sans-serif;
+		padding: 12px 12px;
+		font-size: 28px;
+	}
+
+	.menu a:hover {
+		height: 80%;
+		border-left: 3px var(--Gray-White) solid;
+	}
+
+	.menu svg {
+		width: 40px;
+		height: auto;
+	}
+
+	.adm-container {
+		width: 100%;
+	}
+
+	.header-div {
+		display: flex;
+		width: 100%;
+		justify-content: start;
+		background-color: var(--Gray-White);
+		box-shadow: 0 0 0 0;
+		padding: 0.5rem;
+	}
+
+	.prl-container {
+		display: flex;
+		margin-right: 2rem;
+	}
+
+	.prf-ph  {
+		margin: 0.5rem 1rem;
+	}
+
+	.prf-ph img {
+		max-width: 100%;
+		max-height: 100%;
+		width: 40px;
+		height: 40px;
+		border-radius: 50%;
+	}
+
+	.prf-ph svg {
+		position: absolute;
+		top: 0.8rem;
+		right: 3.2rem;
+		left: 3.5rem;
+	}
+
+
+	.burgerMenu {
+		position: relative;
+		display: block;
+		width: 35px;
+		cursor: pointer;
+		appearance: none;
+		background: none;
+		outline: none;
+		border: none;
+		z-index: 1;
+	}
+
+	.burgerMenu .menuBar,
+	.burgerMenu:after, 
+	.burgerMenu:before {
+		content: '';
+		display: block;
+		width: 100%;
+		height: 5px;
+		background-color: var(--Gray-800);
+		margin: 6px 0;
+		transition: 0.4s;
+	}
+
+	.burgerMenu.is-active:before {
+		transform: rotate(-45deg) translate(-8px, 6px);
+	}
+
+	.burgerMenu.is-active:after {
+		transform: rotate(45deg) translate(-9px, -8px);
+	}
+
+	.burgerMenu.is-active .menuBar {
+		opacity: 0;
+	}
+
+	.navbar.is-active {
+		right:0;
+	}
+
+	.dash-container {
+		font-family: "Work Sans", sans-serif;
+		padding: 2rem;
+	}
+
+	.dash-title h1 {
+		font-size: 32px;
+		font-weight: 600;
+	}
+
+	.dash-title p {
+		font-size: 24px;
+		font-weight: 200;
+	}
+
+	.smry-div {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1rem;
+		margin: 2rem 0;
+		width: 100%;
+	}
+
+	.smry-card {
+		width: 100%;
+		height: auto;
+		box-shadow: 1px 1px 10px 1px;
+		border: none;
+		border-radius: 10px;
+		padding: 1rem;
+	}
+
+	.smry-card .card-nbr {
+		font-size: 22px;
+		padding: 0.5rem 0;
+		font-weight: 600;
+	}
+
+	.smry-card .card-name {
+		font-size: 26px;
+		font-weight: 400;
+	}
+
+	.bl-card {
+		background-color: rgba(218, 77, 241, 0.4);
+	}
+
+	.qr-card {
+		background-color: rgba(255, 234, 198, 0.4);
+	}
+
+	.lk-card {
+		background-color: rgba(255, 61, 166, 0.4);
+	}
+
+	.cm-card {
+		background-color: rgba(0, 102, 153, 0.4);
+	}
+
+	.latest-notf {
+		overflow: auto;
+	}
+
+	.tb-container {
+		background-color: #fff;
+		border-radius: 10px;
+		border: none;
+		padding: 2rem;
+		box-shadow: 1px 1px 10px 1px;
+		margin: 1rem 0;
+		max-height: 300px;
+		overflow: auto;
+	}
+
+	table {
+		border-collapse: collapse;
+	}
+
+	table th {
+		padding: 1rem 0;
+		background-color: var(--Gray-50);
+	}
+
+	table td {
+		font-size: 12px;
+		padding: 1rem;
+	}
+
+	table tr:nth-child(even) {
+		background-color: var(--Gray-50);
+	}
 }
