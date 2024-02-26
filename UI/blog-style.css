@@ -428,7 +428,7 @@ form .text-sct svg {
 		width: 100%;
 		min-height: 100vh;
 		display: block;
-		z-index: 98;
+		z-index: 1;
 		-webkit-transition: 0.4s;
 		transition: 0.4s;
 		background-color: rgba(165, 61, 255, 0.6);
@@ -555,7 +555,7 @@ form .text-sct svg {
 		background: none;
 		outline: none;
 		border: none;
-		z-index: 98;
+		z-index: 1;
 	}
 
 	.burgerMenu .menuBar,

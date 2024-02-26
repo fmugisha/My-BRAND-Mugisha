@@ -201,13 +201,9 @@ form {
 	gap: 0.2rem;
 }
 
-.valid-div {
+form .valid-p {
 	color: crimson;
-	margin-top: 7rem;
-}
-
-#errorNote {
-	display: none;
+	margin-top: 2rem;
 }
 
 form input {
@@ -316,7 +312,7 @@ form button svg {
 		width: 100%;
 		min-height: 100vh;
 		display: block;
-		z-index: 98;
+		z-index: 1;
 		-webkit-transition: 0.4s;
 		transition: 0.4s;
 		background-color: rgba(165, 61, 255, 0.6);
@@ -423,9 +419,14 @@ form button svg {
 	}
 
 	.mobile-navbar {
+		position: fixed;
 		display: flex;
 		justify-content: space-between;
-		margin: 1rem 0 3rem 0;
+		width: 100%;
+		margin: 0;
+		padding: 2rem;
+		background-color: var(--Gray-White);
+		z-index: 1;
 	}
 	#mb-logo {
 		display: flex;
@@ -470,7 +471,7 @@ form button svg {
 		background: none;
 		outline: none;
 		border: none;
-		z-index: 98;
+		z-index: 1;
 	}
 
 	.burgerMenu .menuBar,
@@ -504,6 +505,7 @@ form button svg {
 	.lg-container {
 		position: relative;
 		display: grid;
+		margin-top: 0;
 		padding: 1rem;
 		width: 100%;
 		height: 100%;
@@ -514,11 +516,11 @@ form button svg {
 		border-radius: 0;
 		font-family: "Work Sans", sans-serif;
 		background-color: #fff;
-		z-index: 0;
 	}
 
 	.lt-blog {
 		width: 100%;
+		margin-top: 8rem;
 	}
 
 	.lt-blog h1 {

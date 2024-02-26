@@ -1,26 +1,33 @@
 document.getElementById("form").addEventListener("submit", function(event) {
-  event.preventDefault(); // Prevent the form from submitting
+  event.preventDefault();
 
   let email = document.getElementById("email").value;
   let password = document.getElementById("password").value;
 
+  document.getElementById("errorEmail").style.display = "none";
+  document.getElementById("errorPassword").style.display = "none";
+
   if (email.trim() === "") {
-    displayError("valid-email", "Email is required.");
+    displayError("errorEmail", "Email is required.");
     return;
   }
 
   if (!isValidEmail(email)) {
-    displayError("valid-email", "Invalid email format.");
+    displayError("errorEmail", "Invalid email format.");
     return;
   }
 
   if (password.trim() === "") {
-    displayError("valid-passw", "Password is required.");
+    displayError("errorPassword", "Password is required.");
+    return;
+  }
+
+  if (password !== "password") {
+    displayError("errorPassword", "Passwords is incorrect.");
     return;
   }
 
   document.getElementById("form").reset();
-  errorNote.style.display = "none";
 
 });
 
@@ -30,7 +37,7 @@ function isValidEmail(email) {
 }
 
 function displayError(errorId, message) {
-  let errorNote = document.getElementById("errorNote");
-  errorNote.innerText = message;
-  errorNote.style.display = "block";
+  let errorElement = document.getElementById(errorId);
+  errorElement.innerText = message;
+  errorElement.style.display = "block";
 }
