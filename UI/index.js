@@ -47,7 +47,7 @@ document.getElementById("form").addEventListener("submit", function(event) {
 
 });
 
-function isValidEmail(email, lg_email) {
+function isValidEmail(email) {
   let emailRegex = /\S+@\S+\.\S+/;
   return emailRegex.test(email, lg_email);
 }
